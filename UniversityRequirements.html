@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+   
+</head>
+<body>
+
+    <div id="univerisyDetailsContainer">
+        <h2 id="selectedUniversity"></h2>
+        <table>
+            <tr>
+                <th>Requirements</th>
+                <th>Admission date</th>
+                <th>Total cost</th>
+            </tr>
+            <tr>
+                <td id="requirments"></td>
+                <td id="admissionLastDate"> </td>
+                <td id="toatlCost"></td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <script type="text/javascript"> 
+        var univeristyName = window.location.search.split("=")[1];
+        document.getElementById("selectedUniversity").innerHTML = univeristyName;
+
+        if (univeristyName == "UIU") {
+            document.getElementById("requirments").innerHTML = "GPA 4.6 in both SSC and HSC";
+            document.getElementById("admissionLastDate").innerHTML = "5th January 2021";
+            document.getElementById("toatlCost").innerHTML = "5000 BDT";
+        }
+        else if (univeristyName == "DU") {
+            document.getElementById("requirments").innerHTML = "Excellentt at math";
+            document.getElementById("admissionLastDate").innerHTML = "10th February 2021";
+            document.getElementById("toatlCost").innerHTML = "4000 BDT";
+        }
+        else if (univeristyName == "NSU") {
+            document.getElementById("requirments").innerHTML = "Good drawing skills";
+            document.getElementById("admissionLastDate").innerHTML = "12th March 2021";
+            document.getElementById("toatlCost").innerHTML = "2000 BDT";
+        }
+
+
+
+    </script>
+
+
+</body>
+</html>
